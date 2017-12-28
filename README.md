@@ -1,5 +1,5 @@
 # github-api-handler
-when release, auto update electerm.html5beta.com
+electerm github api server, when release, auto update electerm.html5beta.com
 
 # dev
 ```bash
