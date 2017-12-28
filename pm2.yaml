@@ -1,0 +1,8 @@
+apps:
+    name: electerm-github-api-server
+    script: ./run-electerm-github-api-server.sh
+    error_file: ./logs/electerm-github-api-server_err.log
+    out_file: ./logs/electerm-github-api-server_out.log
+    pid_file: ./pids/electerm-github-api-server.pid
+    # env:
+    #     NODE_ENV: production
