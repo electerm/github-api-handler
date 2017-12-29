@@ -7,7 +7,7 @@ import logging
 imp.load_source('config', './config_default.py')
 
 from config import conf
-
+print(conf)
 app = Flask(__name__)
 @app.route('/', methods = ['GET'])
 def index():
@@ -16,7 +16,9 @@ def index():
 
 @app.route('/github-electerm-api/' + conf['apiName'], methods = ['POST'])
 def github():
-  print (request.data)
+  data = request.data.decode("utf-8")
+  with open(conf['githubReleaseJsonPath'], 'w') as the_file:
+    the_file.write(data)
   return 'ok'
 
 if __name__ == '__main__':

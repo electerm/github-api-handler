@@ -2,5 +2,6 @@
 conf = {
 #   'port': 5060,
 #   'host': 'localhost',
-#   'apiName': 'api'
+#   'apiName': 'api',
+#   'githubReleaseJsonPath': 'electerm-github-release.json'
 }
