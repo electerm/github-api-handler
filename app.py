@@ -7,7 +7,7 @@ import logging
 imp.load_source('config', './config_default.py')
 
 from config import conf
-print(conf)
+
 app = Flask(__name__)
 @app.route('/', methods = ['GET'])
 def index():
