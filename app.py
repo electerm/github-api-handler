@@ -17,6 +17,7 @@ def index():
 @app.route('/github-electerm-api/' + conf['apiName'], methods = ['POST'])
 def github():
   data = request.data.decode("utf-8")
+  data = data.encode('ascii', 'ignore').decode('ascii')
   with open(conf['githubReleaseJsonPath'], 'w') as the_file:
     the_file.write(data)
   return 'ok'
